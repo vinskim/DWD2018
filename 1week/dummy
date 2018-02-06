@@ -1,0 +1,14 @@
+<html> 
+	<head> <!-- Start the Head -->
+		<title>This is a Web Page</title> 
+	</head> 
+    
+	<body>
+		This is where you would put the content of the page. <!-- This is a comment and won't display -->
+		This will be on the same line as the above.  To specify a line break, you use: <br /> <br />
+		<!-- The above text displays both a <br /> and has this funny code: <br />   That funny code allows us to display the special characters that are typically used to define a tag so that we can display them without the browser actually thinking they are the start and end of a tag.  This symbol:  < is written as < meaning "less than".  This symbol: > is written as > -->
+		This text will be a line down
+		<br /><br /> <!-- Two line breaks --> <!-- Line break tags include the closing "/" as part of them, there isn't a </br> tag. -->
+		<blink>This Text Probably Doesn't Blink</blink>
+	</body> 
+</html> 
