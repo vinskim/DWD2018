@@ -1,14 +1,18 @@
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
+var path = require('path');
+var bodyParser = require('body-parser');
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+//  res.send('Hello World!')
+    res.sendFile(path.join(__dirname + '/index.html'));
 })
 
 app.get('/somethingelse', function (req, res) {
@@ -19,6 +23,12 @@ app.get('/randomfile', function (req, res) {
 	var fileToSend = "somerandomfile.txt";
 	res.sendfile(fileToSend, {root: './public'}); // Files inside "public" folder
 });
+
+app.post('/formpost', function (req,res) {
+    //console.log("from index.html");
+    //console.log(req);
+    console.log(req.body.textfield);
+})
 
 var archive = [];
 
