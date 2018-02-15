@@ -12,8 +12,8 @@ var db = new Datastore({filename: "data.db", autoload: true});
 
 // Create a JavaScript Object with data to store
 var datatosave = {
-	name: "Joohyun",
-	message: "What is life?"
+	name: "Vincent",
+	message: "DWD CLASS?"
 };
 		
 
@@ -35,7 +35,7 @@ db.find({}, function(err, docs) {
 
 
 app.get('/', function (req, res) {
-  res.send(" marvel character " );
+  res.send(" difficult to understand " );
 });
 
 app.listen(8080, function () {
