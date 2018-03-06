@@ -48,12 +48,12 @@ function makeHTML(definition){
 }
 
   function findmeaning(word){
-    var theURL='http://api.urbandictionary.com/v0/define?term='+word+'';
+    var theURL='GET https://api.yelp.com/v3/businesses/search'+word+'';
    	$.ajax({
    		url: theURL,
    		type:'GET',
    		dataType: 'jsonp',
-   		error: function(err){
+   		error: function(err){z
    			console.log("We got problems!");
    			console.log(err);
    		},

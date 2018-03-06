@@ -1,0 +1,102 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
+	<script src="p5.speech.js"></script>
+    <script src="index.js"></script>
+    <script src="server.js"></script>
+
+
+<style>
+#container{
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 400px;
+}
+
+h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /*margin: 0px auto;*/
+    /*position: absolute;*/
+    /*top:400px;*/
+
+
+}
+</style>
+
+</head>
+<body>
+<div id="container"></div>
+<input id="the-input" placeholder="name" type="text"/>
+<button id="the-button">enter</button>
+
+<script>
+
+
+function setup()
+{
+	createCanvas(window.innerWidth,50);
+	background(255);
+	fill(0, 0, 0, 255);
+	textSize(30);
+	textAlign(CENTER);
+
+
+
+}
+
+
+
+$("#the-button").click(function(){
+	var theInputValue = $('#the-input').val();
+		console.log(theInputValue);
+		findmeaning(theInputValue);
+
+});
+
+$("#the-input").keypress(function(evt){
+	if(evt.which==13){
+		$("#the-button").trigger('click');
+	}
+});
+
+
+//console -> display
+function makeHTML(definition){
+	$('#container').html('');
+	let htmlString = '<h1 class="text">'+''+definition+'</h1>';
+
+	$('#container').append(htmlString);
+}
+
+
+//api
+function findmeaning(word){
+	var theURL='/yelp?word='+word+'';
+	$.ajax({
+		url: theURL,
+		type:'GET',
+		dataType: 'jsonp',
+		error: function(err){z
+			console.log("We got problems!");
+			console.log(err);
+		},
+		success: function(data){
+			console.log("WooHoo!");
+			console.log(data);
+
+			let definition = data.list[0].definition
+			console.log(definition);
+
+		 makeHTML(definition);
+
+		}
+	});
+
+}
+</script>
+</body>
+</html>

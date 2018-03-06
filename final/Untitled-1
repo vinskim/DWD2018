@@ -1,0 +1,26 @@
+{"businesses": 
+    [{"id": "komodo-los-angeles-6", 
+    "name": "Komodo", 
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xoKBjmU2kwKu5QJ4j-9vMQ/o.jpg", 
+    "is_closed": false, 
+    "url": "https://www.yelp.com/biz/komodo-los-angeles-6?adjust_creative=fSto5388r9X-YVz0T61iPw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=fSto5388r9X-YVz0T61iPw", 
+    "review_count": 1665, 
+    "categories": [
+            {"alias": "asianfusion", "title": "Asian Fusion"}, 
+            {"alias": "indonesian", "title": "Indonesian"}, 
+            {"alias": "newmexican", "title": "New Mexican Cuisine"}
+        ], 
+    "rating": 4.5, 
+    "coordinates": {"latitude": 34.05487395823, "longitude": -118.383980020881}, 
+    "transactions": ["pickup", "delivery"], 
+    "price": "$$", 
+    "location": {"address1": "8809 W Pico Blvd", "address2": "", "address3": "", "city": "Los Angeles", "zip_code": "90035", "country": "US", "state": "CA", "display_address": ["8809 W Pico Blvd", "Los Angeles, CA 90035"]}, 
+    "phone": "+13102465153", 
+    "display_phone": "(310) 246-5153", 
+    "distance": 2582.910429983216}], 
+    "total": 6200, 
+    "region": {"center": {
+                "longitude": -118.406867981, 
+                "latitude": 34.0682920373}
+              }
+}
