@@ -17,29 +17,19 @@
 	{
     createCanvas(window.innerWidth,50);
 
-
-
-
-    
-
-
-
 	  myRec.onResult = showResult;
     myRec.start();
 	}
-	// function draw()
-	// {
-	// }
+
+
+  
 	function showResult()
 	{
 		if(myRec.resultValue==true) {
-			background(255);
-
-      //image_url('<img src="'+response.jsonBody.businesses[i].image_url+'">')
-			// text(myRec.resultString, width/2, height/2);
+      background(255);
+      
 			console.log(myRec.resultString);
       let inputValue = myRec.resultString;
-			//yelpAPI(word);
 			
 			$.ajax('/yelp/' + myRec.resultString)
 			.done(function(results){
@@ -59,53 +49,6 @@
     $('#container').append(htmlString);
 }
 
-// function findmeaning(word){
-//     var theURL='/yelp?word='+word+'';
-//    	$.ajax({
-//    		url: theURL,
-//    		type:'GET',
-//    		dataType: 'jsonp',
-//    		error: function(err){z
-//    			console.log("We got problems!");
-//    			console.log(err);
-//    		},
-//    		success: function(data){
-//   			console.log("WooHoo!");
-//   			console.log(data);
-
-//       //   let definition = data.list[0].definition
-//       //   console.log(definition);
-
-//       //  makeHTML(definition);
-
-//   		}
-//    	});
-
-//   }
-
-  // function callYelp(term){
-  //   var theURL='https://api.yelp.com/v3/businesses/search'+word+'';
-  //  	$.ajax({
-  //  		url: theURL,
-  //  		type:'GET',
-  //  		dataType: 'jsonp',
-  //  		error: function(err){z
-  //  			console.log("We got problems!");
-  //  			console.log(err);
-  //  		},
-  //  		success: function(data){
-  // 			console.log("WooHoo!");
-  // 			console.log(data);
-
-  //       let definition = data.list[0].definition
-  //       console.log(definition);
-
-  //      makeHTML(definition);
-
-  // 		}
-  //  	});
-
-  // }
 </script>
 <style>
 #container{
